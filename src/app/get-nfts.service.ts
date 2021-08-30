@@ -11,4 +11,6 @@ export class GetNftsService {
     let url:string="https://bundler.openkoi.com:8888/state/top-content-predicted?frequency=1w";
     return this.http.get(url)
   }
-}
+
+  }
+

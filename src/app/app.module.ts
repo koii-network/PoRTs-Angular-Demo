@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import {RouterModule} from "@angular/router"
 import { AppComponent } from './app.component';
-import { XyzComponent } from './xyz/xyz.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {HttpClientModule} from "@angular/common/http"
+import {HttpClientModule} from "@angular/common/http";
+import { DetailsComponent } from './details/details.component';
+import { ListComponent } from './list/list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    XyzComponent
+    DetailsComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      [{path:"",component:ListComponent},{path:"details",component:DetailsComponent}]
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
