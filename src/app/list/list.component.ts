@@ -16,9 +16,16 @@ export class ListComponent {
       this.tmp = data;
       for (let i = 0; i < 20; i++) {
         let e = this.tmp[i];
-        fetch(`https://mainnet.koii.live/attention/nft?id=${e["id"]}`)
+        fetch(`https://mainnet.koii.live/attention/nft?id=${e['id']}`)
           .then((res) => res.json())
-          .then((res) => this.nftContent.push(res));
+          .then((res) => {
+            res.reward = Math.round(res.reward * 100) / 100
+            this.nftContent.push(res);
+
+            
+            
+            
+          });
       }
     });
   }
