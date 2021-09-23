@@ -16,9 +16,7 @@ export class ListComponent {
       this.tmp = data;
       for (let i = 0; i < 20; i++) {
         let e = this.tmp[i];
-        let key = Object.keys(e)[0];
-        this.nftList.push(this.tmp[i][key]);
-        fetch(`https://bundler.openkoi.com:8888/state/nft?tranxId=${key}`)
+        fetch(`https://mainnet.koii.live/attention/nft?id=${e["id"]}`)
           .then((res) => res.json())
           .then((res) => this.nftContent.push(res));
       }

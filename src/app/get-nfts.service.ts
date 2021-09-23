@@ -8,7 +8,7 @@ export class GetNftsService {
 
   constructor(private http:HttpClient) { }
   getData(){
-    let url:string="https://bundler.openkoi.com:8888/state/top-content-predicted?frequency=1w";
+    let url:string="https://mainnet.koii.live/attention/nft-summaries?period=1d";
     return this.http.get(url)
   }
 

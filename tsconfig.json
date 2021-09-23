@@ -16,10 +16,18 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": [
-      "es2018",
-      "dom"
-    ]
+    "allowJs": true,
+    "esModuleInterop": true,
+    "paths": {
+      "stream": ["./node_modules/readable-stream"],
+      "crypto": ["./node_modules/crypto-browserify"],
+      "http":["./node_modules/http-browserify"],
+      "https":["./node_modules/https-browserify"]
+
+    },
+    "allowSyntheticDefaultImports": true,
+    "checkJs": false,
+    "lib": ["es2018", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

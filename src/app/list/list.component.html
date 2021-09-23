@@ -1,15 +1,15 @@
-<p>list works!</p>
+
 <div class="container">
     <div class="row">
       <div class="col-md-6 mb-5" *ngFor="let nft of nftContent"  >
-        <div class="card" style="width: 18rem">
-          <img class="card-img-top" src="https://gatewayv2.koi.rocks/{{nft.txIdContent}}" alt="Card image cap" />
+        <div class="card" style="width: 18rem;padding-bottom:10px">
+          <img class="card-img-top" src="https://gatewayv2.koi.rocks/{{nft.id}}" alt="Card image cap" />
           <div class="card-body">
             <h5 class="card-title">{{nft.name}}</h5>
             <p class="card-text">
               {{nft.description}}
             </p>
-            <a href="#" class="btn btn-primary">View NFT!</a>
+            <a [routerLink]="['/details',nft.id]" class="btn btn-primary">View NFT!</a>
           </div>
         </div>
       </div>

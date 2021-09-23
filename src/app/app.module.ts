@@ -18,7 +18,7 @@ import { ListComponent } from './list/list.component'
     NgbModule,
     HttpClientModule,
     RouterModule.forRoot(
-      [{path:"",component:ListComponent},{path:"details",component:DetailsComponent}]
+      [{path:"",component:ListComponent},{path:"details/:id",component:DetailsComponent}]
     )
   ],
   providers: [],
