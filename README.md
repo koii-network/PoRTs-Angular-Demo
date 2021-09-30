@@ -1,27 +1,37 @@
-# PortsAngularDemo
+# KOII PoRT Angular Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.2.
+This is demo shows how to use KOII PoRT into an angular project. 
 
-## Development server
+## Install KOII PoRT:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To install KOII PoRT 
+`npm install @_koi/port`
+or
+`yarn add @_koi/port`
 
-## Code scaffolding
+## Setting up tsconfig fro PoRT
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+KOII-PoRT depends upon crypto  and some other modules in order to work so need rto specify paths ofr those modules in our `tsconfig.json` file. Add following lines under `Compiler Options`
 
-## Build
+```json
+    "paths": {
+      "stream": ["./node_modules/readable-stream"],
+      "crypto": ["./node_modules/crypto-browserify"],
+      "http":["./node_modules/http-browserify"],
+      "https":["./node_modules/https-browserify"]
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    },
+```
 
-## Running unit tests
+## updating `polyfills.ts` file
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Since KOII PoRT depends upon `process` and `Buffer` so you need to add following lines to your `src/polyfills.ts` file
 
-## Running end-to-end tests
+```ts
+import { Buffer } from 'buffer';
+ (window as any).global = (window as any).global || window;
+ (window as any).Buffer =   (window as any).Buffer || Buffer;
+ (window as any).process =  (window as any).process || {};
+ (window as any).process.env =(window as any).process.env || {};
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

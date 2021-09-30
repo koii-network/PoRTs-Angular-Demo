@@ -9,12 +9,12 @@
   dependencies:
     smartweave "^0.4.41"
 
-"@_koi/port@0.3.0-beta":
-  version "0.3.0-beta"
-  resolved "https://registry.yarnpkg.com/@_koi/port/-/port-0.3.0-beta.tgz#6d8b60dd44a999db27bbdf183d25d4560e490726"
-  integrity sha512-phW/CaQ0ZqQ+Uc7SiD/RcPla+dwnrh1PGqqmeDW7G0LxrUhMC5R3UVd18HE6uGEJHl4j2+uQEJabHBLMG+A+tA==
+"@_koi/port@0.3.4-alpha":
+  version "0.3.4-alpha"
+  resolved "https://registry.yarnpkg.com/@_koi/port/-/port-0.3.4-alpha.tgz#9622d288289c9a6df769400b14fd4cf9736c85db"
+  integrity sha512-ZdPMQ9ydfoP17XAtcIhRIDAiNvSUVigsfqOfCKsiDgQIeZuJhFbcXXk0TMR8QnmCd0oCmNKn1/ejk+mdUyVIkQ==
   dependencies:
-    "@_koi/sdk" "^2.3.0-beta.1"
+    "@_koi/sdk" "^2.3.0"
     arweave "^1.10.16"
     dotenv "^10.0.0"
     node-fetch "^2.6.1"
@@ -36,10 +36,10 @@
     smartweave "^0.4.29"
     web3 "^1.5.0"
 
-"@_koi/sdk@^2.3.0-beta.1":
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/@_koi/sdk/-/sdk-2.3.1.tgz#18bfac21d34e33691b6f4fbfde3ed1fc33a42627"
-  integrity sha512-NGLdNYitLyYFP27GV1ujcxwOrFKkhPAcGrHrrPBd+ImFtW2RIeCrWPkLA6OfO7gsD2IR02dwGRw/JTtJhrK7NA==
+"@_koi/sdk@^2.3.0":
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/@_koi/sdk/-/sdk-2.3.2.tgz#c13c8679783f487cf1157947e50efcd251692b10"
+  integrity sha512-4GtLDJ/Aihc+vMEX7jZlPJ0Qr9AAy81cD6GSeuvoIY4WScqW0983JoYfHkQjUMOPxwfg4NtDddf68a7NaTWmRg==
   dependencies:
     "@_koi/kohaku" "^1.0.9"
     arweave "^1.10.13"
